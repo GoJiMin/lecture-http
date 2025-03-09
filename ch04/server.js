@@ -9,7 +9,7 @@ const handler = (req, res) => {
     return;
   }
 
-  res.setHeader("Set-Cookie", "sid=1");
+  res.setHeader("Set-Cookie", "sid=1; Domain=mysite.com; Path=/private");
   res.write("Welcome!\n");
   res.end();
 };
