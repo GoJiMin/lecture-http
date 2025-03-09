@@ -9,7 +9,12 @@ const handler = (req, res) => {
     return;
   }
 
-  res.setHeader("Set-Cookie", "sid=1; Domain=mysite.com; Path=/private");
+  // res.setHeader("Set-Cookie", "sid=1; Domain=mysite.com; Path=/private");
+  // res.setHeader("Set-Cookie", "sid=1; Max-Age=600");
+  const threeDaysLater = new Date(
+    Date.now() + 3 * 24 * 60 * 60 * 1000
+  ).toUTCString();
+  res.setHeader("Set-Cookie", `sid=1; Expires=${threeDaysLater};`);
   res.write("Welcome!\n");
   res.end();
 };
