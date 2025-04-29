@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <nav><a href="/">< Home</a></nav>
+    <h2>GET LOGIN</h2>
+    <form method="GET" action="/login">
+      <input type="text" name="email" placeholder="email.." />
+      <input type="password" name="password" placeholder="******" />
+      <button type="submit">Login</button>
+    </form>
+    <h2>POST LOGIN</h2>
+    <form method="POST" action="/login">
+      <input type="text" name="email" placeholder="email.." />
+      <input type="password" name="password" placeholder="******" />
+      <button type="submit">Login</button>
+    </form>
+    <h2>POST LOGIN 2</h2>
+    <form method="POST" action="/login" enctype="multipart/form-data">
+      <input type="text" name="email" placeholder="email.." />
+      <input type="password" name="password" placeholder="******" />
+      <input
+        type="file"
+        name="identification-card"
+        accept="image/png, image/jpeg"
+      />
+      <button type="submit">Login</button>
+    </form>
+  </body>
+</html>
